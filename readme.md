@@ -30,7 +30,7 @@ Filter parameter controls the parameters used to query for post
 
 //Returns posts made over a year agon but modified in the past month
 * filter[date_query][0][column]=post_date_gmt&filter[date_query][0][before]=1 year ago&filter[date_query][1][column]=post_modified_gmt&filter[date_query][1][after]=1 month ago
----
+
 
 ```
 GET /posts/:post_id
@@ -38,7 +38,6 @@ GET /posts/:post_id
 
 Gets post by post id.
 author and comments are sideloaded
----
 
 ```
 POST /posts
@@ -49,7 +48,7 @@ Provide all the info in data
 * data[description] - required
 * data[date] - Date and time the post was, or should be, published in local time. Date should be an RFC3339    timestamp](http://tools.ietf.org/html/rfc3339). Example: 2014-01-01T12:20:52Z. Default is the local date and time. (string) optional
 * data[discussion_tags] - optional 
----
+**Requires access_token
 
 ```
 POST /posts/:post_id/like
@@ -57,7 +56,7 @@ POST /posts/:post_id/like
 
 Like discussion
 Toggles like / unlike
----
+**Requires access_token
 
 ```
 POST /posts/:post_id/follow
@@ -65,7 +64,7 @@ POST /posts/:post_id/follow
 
 Follow discussion
 Toggles follow / unfollow
----
+**Requires access_token
 
 ```
 GET /posts/:post_id/tags
@@ -80,28 +79,52 @@ POST /posts/:post_id/tags
 
 Add new tags
 * data['discussion_tags'] = "tag1, tag2, tag3"
+**Requires access_token
 
 ###Comments
 
 ```
 GET /comments
 ```
+
+Get comments by IDS
+* ?ids[]=1&ids[]=2
+
 ```
 POST /comments
 ```
+
+Create New Comment
+* data['content'] = "comment text"
+**Requires access_token
 
 ###Authenitcation
 ```
 POST /auth/token
 ```
 
+Authenticate user
+* Require: username, password
+* Right now we are sending FB access token as username and password
+* on successful authorization returns in the following format
+* {"access_token":"token_string","expires_in":3600,"token_type":"Bearer","scope":null,"refresh_token":"refresh_token"}
+
 ###Users
 ```
 GET /users 
 ```
+
+Get users list 
+* ids=1,2,3,4
+
 ```
 GET /users/:user_id
 ```
+
+Get single user
+
 ```
 GET /users/me
 ```
+Return user linked with access_token
+**Requires access_token
