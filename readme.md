@@ -48,7 +48,8 @@ Provide all the info in data
 * data[description] - required
 * data[date] - Date and time the post was, or should be, published in local time. Date should be an RFC3339    timestamp](http://tools.ietf.org/html/rfc3339). Example: 2014-01-01T12:20:52Z. Default is the local date and time. (string) optional
 * data[discussion_tags] - optional 
-**Requires access_token
+
+**Requires access_token**
 
 ```
 POST /posts/:post_id/like
@@ -56,7 +57,8 @@ POST /posts/:post_id/like
 
 Like discussion
 Toggles like / unlike
-**Requires access_token
+
+**Requires access_token**
 
 ```
 POST /posts/:post_id/follow
@@ -64,7 +66,8 @@ POST /posts/:post_id/follow
 
 Follow discussion
 Toggles follow / unfollow
-**Requires access_token
+
+**Requires access_token**
 
 ```
 GET /posts/:post_id/tags
@@ -79,7 +82,8 @@ POST /posts/:post_id/tags
 
 Add new tags
 * data['discussion_tags'] = "tag1, tag2, tag3"
-**Requires access_token
+
+**Requires access_token**
 
 ###Comments
 
@@ -96,7 +100,8 @@ POST /comments
 
 Create New Comment
 * data['content'] = "comment text"
-**Requires access_token
+
+**Requires access_token**
 
 ###Authenitcation
 ```
