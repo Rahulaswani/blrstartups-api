@@ -31,6 +31,31 @@ Filter parameter controls the parameters used to query for post
 //Returns posts made over a year agon but modified in the past month
 * filter[date_query][0][column]=post_date_gmt&filter[date_query][0][before]=1 year ago&filter[date_query][1][column]=post_modified_gmt&filter[date_query][1][after]=1 month ago
 
+```json
+{
+id: 40878,
+title: "",
+type: "discussion",
+author: 91279,
+description: "Hello, I want to start an online store of electrical goods which is still untouched , I have an experience of 17years if anyone interested can call me on 9916969139",
+date: "2015-05-01T08:31:28+00:00",
+modified: "2015-05-01T08:31:28+00:00",
+format: "standard",
+slug: "40878",
+excerpt: "Hello, I want to start an online store of electrical goods which is still untouched , I have an experience of 17years if anyone interested can call me on 9916969139",
+comment_count: "0",
+like_count: null,
+comments: [ ],
+post_belongs_to: [ ],
+discussion_tags: [
+"8"
+],
+date_tz: "UTC",
+date_gmt: "2015-05-01T08:31:28+00:00",
+modified_tz: "UTC",
+modified_gmt: "2015-05-01T08:31:28+00:00"
+}
+```
 
 ```
 GET /posts/:post_id
