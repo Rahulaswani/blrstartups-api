@@ -1,9 +1,15 @@
-API Documentation
---
+#API Documentation
 
 Trying to document api endpoints of blrstartups community
 
-Routes
+##Routes
 ---
 
 Following are the availble routes 
+
+###Posts
+----
+
+`GET /posts
+`GET /posts/:post_id
+
