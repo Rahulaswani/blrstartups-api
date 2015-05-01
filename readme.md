@@ -10,7 +10,7 @@ Following are the availble routes
 ###Posts
 ---
 ```
-GET /posts
+**GET** /posts
 ```
 ```
 GET /posts/:post_id
