@@ -33,7 +33,7 @@ Filter parameter controls the parameters used to query for post
 * filter[date_query][0][column]=post_date_gmt&filter[date_query][0][before]=1 year ago&filter[date_query][1][column]=post_modified_gmt&filter[date_query][1][after]=1 month ago
 
 Normal Post
-```json
+```javascript
 {
     id: 40862,
     title: "",
@@ -67,7 +67,7 @@ Normal Post
 
 Job Post - By default every post is discussion post but if key "meta_post_format" present and value is job then my friend it is a job post.
 
-```json
+```javascript
 {
     id: 40872,
     title: "Android developer required (2+ years experience)",
